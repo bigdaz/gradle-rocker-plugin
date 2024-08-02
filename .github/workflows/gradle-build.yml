@@ -21,7 +21,7 @@ jobs:
                   java-version: 11
                   distribution: 'liberica'
             - name: Setup Gradle
-              uses: gradle/actions/setup-gradle@v3
+              uses: gradle/actions/setup-gradle@prerelease/v4
               with:
                   dependency-graph: generate-and-submit
             - name: Build with Gradle
