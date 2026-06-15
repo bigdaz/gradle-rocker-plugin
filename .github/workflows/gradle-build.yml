@@ -41,8 +41,12 @@ jobs:
           distribution: 'liberica'
           java-version: 25
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v6
+        uses: gradle/actions/setup-gradle@prerelease/config-cache-support
         with:
+          develocity-url: 'https://ge.solutions-team.gradle.com'
           develocity-access-key: ${{ secrets.DV_ACCESS_KEY }}
+          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+        env:
+          DEVELOCITY_STORE_CONFIGURATION_CACHE: 'true'
       - name: Build with Gradle
         run: ./gradlew clean build -PtestJavaRuntimeVersion=${{ matrix.java-version }} -PtestGradleVersion=${{ matrix.gradle-version }}
