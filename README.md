@@ -3,6 +3,7 @@
   <a href="https://community.develocity.cloud/scans?search.rootProjectNames=gradle-rocker-plugin"><img src="https://img.shields.io/badge/Revved%20up%20by-Develocity-06A0CE?logo=Gradle&labelColor=02303A" alt="Revved up by Develocity"></a>
 </p>
 
+
 gradle-rocker-plugin
 ====================
 
