@@ -24,7 +24,7 @@ jobs:
           distribution: 'liberica'
           java-version: 25
       - name: Generate and submit dependency graph
-        uses: gradle/actions/dependency-submission@v6
+        uses: gradle/actions/dependency-submission@prerelease/config-cache-support
         with:
           develocity-url: 'https://ge.solutions-team.gradle.com'
           develocity-access-key: ${{ secrets.DV_ACCESS_KEY }}
